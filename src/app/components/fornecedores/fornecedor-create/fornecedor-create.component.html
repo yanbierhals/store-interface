@@ -1,0 +1,24 @@
+<h1>Adicionar Fornecedor</h1>
+<form>
+  <div class="form-group">
+    <label for="nome">Nome</label>
+    <input type="text" class="form-control" id="nome" [(ngModel)]="novoFornecedor.name" name="nome" required>
+  </div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" class="form-control" id="email" [(ngModel)]="novoFornecedor.email" name="email" required>
+  </div>
+  <div class="form-group">
+    <label for="telefone">Telefone</label>
+    <input type="text" class="form-control" id="telefone" [(ngModel)]="novoFornecedor.phone" name="telefone" required>
+  </div>
+  <div class="form-group">
+    <label for="cnpj">CNPJ</label>
+    <input type="text" class="form-control" id="cnpj" [(ngModel)]="novoFornecedor.cnpj" name="cnpj" required>
+  </div>
+  <div class="form-group">
+    <label for="brandId">ID da Marca</label>
+    <input type="number" class="form-control" id="brandId" [(ngModel)]="novoFornecedor.brandId" name="brandId" required>
+  </div>
+  <button (click)="addFornecedor()" type="submit" class="btn btn-primary">Adicionar</button>
+</form>

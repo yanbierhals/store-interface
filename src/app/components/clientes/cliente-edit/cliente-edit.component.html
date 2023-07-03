@@ -1,0 +1,27 @@
+<div>
+    <h1>Editar Cliente</h1>
+<form>
+  <div class="form-group">
+    <label for="nome">Nome</label>
+    <input type="text" class="form-control" id="nome" [(ngModel)]="cliente.name" name="nome" required>
+  </div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" class="form-control" id="email" [(ngModel)]="cliente.email" name="email" required>
+  </div>
+  <div class="form-group">
+    <label for="telefone">Telefone</label>
+    <input type="text" class="form-control" id="telefone" [(ngModel)]="cliente.phone" name="telefone" required>
+  </div>
+  <div class="form-group">
+    <label for="cpf">CPF</label>
+    <input type="text" class="form-control" id="cpf" [(ngModel)]="cliente.cpf" name="cpf" required>
+  </div>
+  <div class="form-group">
+    <label for="cnpj">CNPJ</label>
+    <input type="text" class="form-control" id="cnpj" [(ngModel)]="cliente.cnpj" name="cnpj" required>
+  </div>
+  <button (click)="updateCliente()" type="submit" class="btn btn-primary">Atualizar</button>
+</form>
+
+</div>

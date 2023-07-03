@@ -1,0 +1,24 @@
+<h1>Adicionar Produto</h1>
+<form>
+  <div class="form-group">
+    <label for="nome">Nome</label>
+    <input type="text" class="form-control" id="nome" [(ngModel)]="novoProduto.name" name="nome" required>
+  </div>
+  <div class="form-group">
+    <label for="unidade">Unidade</label>
+    <input type="text" class="form-control" id="unidade" [(ngModel)]="novoProduto.unit" name="unidade" required>
+  </div>
+  <div class="form-group">
+    <label for="custo">Custo</label>
+    <input type="number" class="form-control" id="custo" [(ngModel)]="novoProduto.cost" name="custo" required>
+  </div>
+  <div class="form-group">
+    <label for="quantidade">Quantidade</label>
+    <input type="number" class="form-control" id="quantidade" [(ngModel)]="novoProduto.count" name="quantidade" required>
+  </div>
+  <div class="form-group">
+    <label for="fornecedor">Fornecedor</label>
+    <input type="number" class="form-control" id="fornecedor" [(ngModel)]="novoProduto.supplierId" name="fornecedor" required>
+  </div>
+  <button (click)="addProduto()" type="submit" class="btn btn-primary">Adicionar</button>
+</form>

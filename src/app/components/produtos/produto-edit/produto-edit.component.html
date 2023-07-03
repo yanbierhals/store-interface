@@ -1,0 +1,26 @@
+<div>
+    <h1>Editar Produto</h1>
+    <form>
+      <div class="form-group">
+        <label for="nome">Nome</label>
+        <input type="text" class="form-control" id="nome" [(ngModel)]="produto.name" name="nome" required>
+      </div>
+      <div class="form-group">
+        <label for="unit">Unidade</label>
+        <input type="text" class="form-control" id="unit" [(ngModel)]="produto.unit" name="unit" required>
+      </div>
+      <div class="form-group">
+        <label for="cost">Custo</label>
+        <input type="number" class="form-control" id="cost" [(ngModel)]="produto.cost" name="cost" required>
+      </div>
+      <div class="form-group">
+        <label for="count">Quantidade</label>
+        <input type="number" class="form-control" id="count" [(ngModel)]="produto.count" name="count" required>
+      </div>
+      <div class="form-group">
+        <label for="supplierId">ID do Fornecedor</label>
+        <input type="number" class="form-control" id="supplierId" [(ngModel)]="produto.supplierId" name="supplierId" required>
+      </div>
+      <button (click)="updateProduto()" type="submit" class="btn btn-primary">Atualizar</button>
+    </form>
+  </div>

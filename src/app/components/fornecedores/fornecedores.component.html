@@ -1,28 +1,28 @@
-<h1>Clientes</h1>
-<a [routerLink]="'/create-cliente'" class="btn btn-sm btn-success mb-2">Adicionar Cliente</a>
+<h1>Fornecedores</h1>
+<a [routerLink]="'/create-fornecedor'" class="btn btn-sm btn-success mb-2">Adicionar fornecedorer</a>
 <table class="table table-striped">
     <thead>
         <tr>
-            <th style="width: 30%">Nome</th>
+            <th style="width: 30%">Name</th>
             <th style="width: 30%">Email</th>
-            <th style="width: 30%">Telefone</th>
+            <th style="width: 30%">Role</th>
             <th style="width: 10%"></th>
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let cliente of clientes">
-            <td>{{ cliente.name }}</td>
-            <td>{{ cliente.email }}</td>
-            <td>{{ cliente.phone }}</td>
+        <tr *ngFor="let supplier of suppliers">
+            <td>{{ supplier.name }}</td>
+            <td>{{ supplier.email }}</td>
+            <td>{{ supplier.phone }}</td>
             <td style="white-space: nowrap">
-                <a [routerLink]="['/edit-cliente', cliente.customerId]" class="btn btn-sm btn-primary mr-1">Editar</a>
+                <a [routerLink]="['/edit-cliente', supplier.supplierId]" class="btn btn-sm btn-primary mr-1">Editar</a>
                 <button  class="btn btn-sm btn-danger btn-delete-cliente" [disabled]="isDeleting">
                     <span *ngIf="isDeleting" class="spinner-border spinner-border-sm"></span>
-                    <span (click)="this.deleteCliente(cliente.customerId)" *ngIf="!isDeleting">Excluir</span>
+                    <span (click)="this.deleteSupplier(supplier.supplierId)" *ngIf="!isDeleting">Excluir</span>
                 </button>
             </td>
         </tr>
-        <tr *ngIf="!clientes">
+        <tr *ngIf="!suppliers">
             <td colspan="4" class="text-center">
                 <span class="spinner-border spinner-border-lg align-center"></span>
             </td>
